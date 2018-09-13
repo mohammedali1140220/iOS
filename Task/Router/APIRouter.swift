@@ -6,45 +6,77 @@
 //  Copyright © 2018 Radix. All rights reserved.
 //
 
+// define libraries 
 import Foundation
 import Alamofire
 
+// define enum APIRouter as URLRequestConvertible
 enum APIRouter: URLRequestConvertible {
     
+    // define case getUsers 
     case getUsers
     
+    // define case getPhotos
     case getPhotos
     
+    // define the variable method to know the method will use 
     private var method: HTTPMethod{
+        
+        // check the case 
         switch self {
+            
+        // case getUsers will return get method 
         case .getUsers:
+            
+            // return get method 
             return .get
+            
+         // case getPhotos will return get method 
         case .getPhotos:
+            
+            // return get method 
             return .get
         }
     }
     
+    // define the path 
     private var path: String {
+        
+        // check the case 
         switch self {
+            
+        // case getUsers 
         case .getUsers:
+            
+            // return string
             return "/users"
             
+        //case getPhotos
         case .getPhotos:
+            
+            // return String
             return "/photos"
         }
         
     }
     
+    // define asURLRequest 
     func asURLRequest() throws -> URLRequest {
+        
+        // define the base url 
         let url = try "https://jsonplaceholder.typicode.com".asURL()
         
+        // define the urlRequest appending with path
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         
         
-        // HTTP Method
+        // append urlRequest with the method 
         urlRequest.httpMethod = method.rawValue
         
+         // check the case 
         switch self {
+            
+        
         case .getUsers:
             urlRequest = try JSONEncoding.default.encode(urlRequest)
             break
@@ -56,7 +88,7 @@ enum APIRouter: URLRequestConvertible {
         }
         
         
-        print(type(of: urlRequest))
+        // return urlRequest
         return urlRequest
     }
     

@@ -57,7 +57,6 @@ enum APIRouter: URLRequestConvertible {
             // return String
             return "/photos"
         }
-        
     }
     
     // define asURLRequest 
@@ -69,24 +68,11 @@ enum APIRouter: URLRequestConvertible {
         // define the urlRequest appending with path
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         
-        
         // append urlRequest with the method 
         urlRequest.httpMethod = method.rawValue
         
-         // check the case 
-        switch self {
-            
-        
-        case .getUsers:
-            urlRequest = try JSONEncoding.default.encode(urlRequest)
-            break
-            
-        case .getPhotos:
-            
-            urlRequest = try JSONEncoding.default.encode(urlRequest)
-            break
-        }
-        
+        // json encoding urlRequest
+        urlRequest = try JSONEncoding.default.encode(urlRequest)
         
         // return urlRequest
         return urlRequest

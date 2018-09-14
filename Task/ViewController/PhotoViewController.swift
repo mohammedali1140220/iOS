@@ -9,7 +9,7 @@
 // Used to display the normal image 
 
 
-// define libraries 
+// import libraries
 import UIKit
 import SDWebImage
 
@@ -30,24 +30,11 @@ class PhotoViewController: UIViewController {
         super.viewDidLoad()
         
         // set the image using sdWebImage 
-        photoImageView.sd_setImage(with: URL(string: photo.url), placeholderImage: UIImage(named: "Landing.png"))
+        self.photoImageView.sd_setImage(with: URL(string: photo.url), placeholderImage: UIImage(named: "Landing.png"))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

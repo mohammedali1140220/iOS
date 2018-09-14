@@ -267,7 +267,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Back"/>
                                                 <connections>
-                                                    <segue destination="rdC-BG-2c0" kind="unwind" unwindAction="cancelToPlayersViewController:" id="HxV-ty-1f5"/>
+                                                    <segue destination="rdC-BG-2c0" kind="unwind" unwindAction="unWindSegue:" id="uyd-N6-lnQ"/>
                                                 </connections>
                                             </button>
                                             <connections>
@@ -401,7 +401,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Back"/>
                                                 <connections>
-                                                    <segue destination="pMY-pR-H90" kind="unwind" unwindAction="cancelToPlayersViewController:" id="10y-Kb-N8w"/>
+                                                    <segue destination="pMY-pR-H90" kind="unwind" unwindAction="unWindSegue:" id="4Xu-ex-2nB"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>

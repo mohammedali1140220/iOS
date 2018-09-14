@@ -27,6 +27,10 @@
 		68EA76202146BEC30029D0DA /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68EA761E2146BEC30029D0DA /* PhotoTableViewCell.xib */; };
 		68EA76232146C2710029D0DA /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA76222146C2710029D0DA /* APIRouter.swift */; };
 		68EA762521475B540029D0DA /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA762421475B540029D0DA /* Photo.swift */; };
+		6B2C8610214BEC2D00A51EF5 /* LoadMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C860E214BEC2D00A51EF5 /* LoadMoreTableViewCell.swift */; };
+		6B2C8611214BEC2D00A51EF5 /* LoadMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2C860F214BEC2D00A51EF5 /* LoadMoreTableViewCell.xib */; };
+		6B2C8614214C035B00A51EF5 /* ExtendPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C8613214C035B00A51EF5 /* ExtendPhotosViewController.swift */; };
+		6B2C8616214C043900A51EF5 /* ExtendUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C8615214C043900A51EF5 /* ExtendUsersViewController.swift */; };
 		CFA7659047A8AF61416E2479 /* Pods_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D9BACCFD5FDD147E403213 /* Pods_Task.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +79,10 @@
 		68EA761E2146BEC30029D0DA /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
 		68EA76222146C2710029D0DA /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		68EA762421475B540029D0DA /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		6B2C860E214BEC2D00A51EF5 /* LoadMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreTableViewCell.swift; sourceTree = "<group>"; };
+		6B2C860F214BEC2D00A51EF5 /* LoadMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMoreTableViewCell.xib; sourceTree = "<group>"; };
+		6B2C8613214C035B00A51EF5 /* ExtendPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendPhotosViewController.swift; sourceTree = "<group>"; };
+		6B2C8615214C043900A51EF5 /* ExtendUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendUsersViewController.swift; sourceTree = "<group>"; };
 		A72960A0F6C66BDB09216F07 /* Pods_TaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24E4710AE1B15521137D88B /* Pods-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Task/Pods-Task.debug.xcconfig"; sourceTree = "<group>"; };
 		EB9E1242FFA6F7AB6242AA68 /* Pods_TaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +151,7 @@
 			children = (
 				68EA76212146C2550029D0DA /* Router */,
 				68EA76172146BCE60029D0DA /* Storyboard */,
-				68EA76162146BCB70029D0DA /* View */,
+				68EA76162146BCB70029D0DA /* ViewController */,
 				68EA760521465C110029D0DA /* Model */,
 				68EA75D7214656C00029D0DA /* AppDelegate.swift */,
 				68EA75DE214656C00029D0DA /* Assets.xcassets */,
@@ -182,16 +190,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		68EA76162146BCB70029D0DA /* View */ = {
+		68EA76162146BCB70029D0DA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6B2C8612214C032D00A51EF5 /* Extensions */,
 				68EA76182146BE970029D0DA /* Nib Files */,
 				68EA760E2146BC520029D0DA /* UsersViewController.swift */,
 				68EA76102146BC840029D0DA /* UserViewController.swift */,
 				68EA76122146BC960029D0DA /* PhotosViewController.swift */,
 				68EA76142146BCA20029D0DA /* PhotoViewController.swift */,
 			);
-			path = View;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		68EA76172146BCE60029D0DA /* Storyboard */ = {
@@ -210,6 +219,8 @@
 				68EA761A2146BEB30029D0DA /* UserTableViewCell.xib */,
 				68EA761D2146BEC30029D0DA /* PhotoTableViewCell.swift */,
 				68EA761E2146BEC30029D0DA /* PhotoTableViewCell.xib */,
+				6B2C860E214BEC2D00A51EF5 /* LoadMoreTableViewCell.swift */,
+				6B2C860F214BEC2D00A51EF5 /* LoadMoreTableViewCell.xib */,
 			);
 			path = "Nib Files";
 			sourceTree = "<group>";
@@ -220,6 +231,15 @@
 				68EA76222146C2710029D0DA /* APIRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		6B2C8612214C032D00A51EF5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6B2C8613214C035B00A51EF5 /* ExtendPhotosViewController.swift */,
+				6B2C8615214C043900A51EF5 /* ExtendUsersViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		ABFB87D7BD7AB6F52005594E /* Frameworks */ = {
@@ -302,6 +322,7 @@
 				TargetAttributes = {
 					68EA75D3214656C00029D0DA = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					68EA75E7214656C10029D0DA = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -338,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B2C8611214BEC2D00A51EF5 /* LoadMoreTableViewCell.xib in Resources */,
 				68EA761C2146BEB30029D0DA /* UserTableViewCell.xib in Resources */,
 				68EA75E2214656C00029D0DA /* LaunchScreen.storyboard in Resources */,
 				68EA76202146BEC30029D0DA /* PhotoTableViewCell.xib in Resources */,
@@ -411,15 +433,18 @@
 				68EA762521475B540029D0DA /* Photo.swift in Sources */,
 				68EA76132146BC960029D0DA /* PhotosViewController.swift in Sources */,
 				68EA761B2146BEB30029D0DA /* UserTableViewCell.swift in Sources */,
+				6B2C8616214C043900A51EF5 /* ExtendUsersViewController.swift in Sources */,
 				68EA76112146BC840029D0DA /* UserViewController.swift in Sources */,
 				68EA760F2146BC520029D0DA /* UsersViewController.swift in Sources */,
 				68EA75D8214656C00029D0DA /* AppDelegate.swift in Sources */,
 				68EA760921465E710029D0DA /* Address.swift in Sources */,
+				6B2C8614214C035B00A51EF5 /* ExtendPhotosViewController.swift in Sources */,
 				68EA760721465C240029D0DA /* User.swift in Sources */,
 				68EA76232146C2710029D0DA /* APIRouter.swift in Sources */,
 				68EA761F2146BEC30029D0DA /* PhotoTableViewCell.swift in Sources */,
 				68EA760B21465E8B0029D0DA /* Geo.swift in Sources */,
 				68EA760D21465E940029D0DA /* Company.swift in Sources */,
+				6B2C8610214BEC2D00A51EF5 /* LoadMoreTableViewCell.swift in Sources */,
 				68EA76152146BCA20029D0DA /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,6 +619,7 @@
 			baseConfigurationReference = B24E4710AE1B15521137D88B /* Pods-Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Task/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -602,6 +628,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = asd.Task;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -612,6 +639,7 @@
 			baseConfigurationReference = F7DF273BFB6117E403AA78AA /* Pods-Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Task/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

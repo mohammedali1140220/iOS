@@ -5,7 +5,7 @@
 //  Created by Radix on 9/10/18.
 //  Copyright © 2018 Radix. All rights reserved.
 //
-// define UserViewController as UIViewController
+// Define UserViewController as UIViewController
 // Used: display user indormation
 
 
@@ -62,11 +62,6 @@ class UserViewController: UIViewController {
         self.setupInformation()
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     /*
     Name: setupInformation
@@ -106,16 +101,10 @@ class UserViewController: UIViewController {
         
         // set companyCatchPhrase.text label to user companyCatchPhrase.text
         self.companyCatchPhrase.text = user.company.catchPhrase
-        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    */
-
 }

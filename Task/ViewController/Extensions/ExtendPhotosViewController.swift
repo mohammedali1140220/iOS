@@ -47,7 +47,7 @@ extension PhotosViewController: UITableViewDataSource, UITableViewDelegate{
             return self.albumIds[String(section)]!
         }
             
-            // if there is no data return 1 section
+        // if there is no data return 1 section
         else{
             return 1
         }
